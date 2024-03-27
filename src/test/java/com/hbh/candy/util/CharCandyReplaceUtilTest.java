@@ -14,5 +14,10 @@ public class CharCandyReplaceUtilTest {
         assertEquals("d", charCandyReplaceUtil.changeStr("abcccbad"));
         assertEquals("abad", charCandyReplaceUtil.changeStr("acccad"));
         assertEquals("abc", charCandyReplaceUtil.changeStr("abc"));
+        assertEquals("测试", charCandyReplaceUtil.changeStr("测试"));
+        assertEquals("测测测", charCandyReplaceUtil.changeStr("测测测"));
+        assertEquals(".", charCandyReplaceUtil.changeStr("."));
+        assertEquals("...!", charCandyReplaceUtil.changeStr("...!"));
+
     }
 }

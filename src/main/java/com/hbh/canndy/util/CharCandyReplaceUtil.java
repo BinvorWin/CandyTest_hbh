@@ -35,10 +35,13 @@ public class CharCandyReplaceUtil implements CandyUtil {
         return sb.toString();
     }
 
-    // 替换字符，如果是连续三个a，则换为空字符串
+    // 替换字符，如果是连续三个a，则换为空字符串，如果不是字母则不处理
     private static String replaceChar(String a) {
         if ("aaa".equals(a)) {
             return "";
+        }
+        if (!a.matches("^[A-Za-z]+$")) {
+            return a;
         }
         return String.valueOf((char) (a.charAt(0) - 1));
     }

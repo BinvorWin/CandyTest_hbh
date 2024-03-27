@@ -13,5 +13,12 @@ public class CharCandyRemoveUtilTest {
         assertEquals("d", charCandyRemoveUtil.changeStr("aabcccbbad"));
         assertEquals("d", charCandyRemoveUtil.changeStr("aaad"));
         assertEquals("abc", charCandyRemoveUtil.changeStr("abc"));
+        assertEquals("测试", charCandyRemoveUtil.changeStr("测试"));
+        assertEquals("试", charCandyRemoveUtil.changeStr("测测测测试"));
+        assertEquals("!", charCandyRemoveUtil.changeStr("!..."));
+        assertEquals(".", charCandyRemoveUtil.changeStr("."));
+
+
+
     }
 }
