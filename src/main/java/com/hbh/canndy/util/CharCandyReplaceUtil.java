@@ -8,6 +8,8 @@ public class CharCandyReplaceUtil implements CandyUtil {
     public String changeStr(String str) {
         StringBuilder sb = new StringBuilder(str);
         int i = 1;//替换次数
+        System.out.println("开始替换字母连续重复3次的字符串：" + str);
+
         while (true) {
             boolean modified = false;
             String temp = sb.toString();
@@ -31,6 +33,7 @@ public class CharCandyReplaceUtil implements CandyUtil {
                 break;
             }
         }
+        System.out.println("字符串:"+str + ",替换字符串后的结果：" + sb);
 
         return sb.toString();
     }
@@ -38,9 +41,11 @@ public class CharCandyReplaceUtil implements CandyUtil {
     // 替换字符，如果是连续三个a，则换为空字符串，如果不是字母则不处理
     private static String replaceChar(String a) {
         if ("aaa".equals(a)) {
+            System.out.println(a + "字母a前面无其他字母，移除");
             return "";
         }
         if (!a.matches("^[A-Za-z]+$")) {
+            System.out.println(a + "不是字母，不需要处理");
             return a;
         }
         return String.valueOf((char) (a.charAt(0) - 1));

@@ -8,6 +8,8 @@ public class CharCandyRemoveUtil implements CandyUtil {
     public String changeStr(String str) {
         StringBuilder sb = new StringBuilder(str);
         int i = 1;//移除次数
+        System.out.println("开始消除重复字符串：" + str);
+
         while (true) {
             boolean modified = false;
             String temp = sb.toString();
@@ -28,6 +30,7 @@ public class CharCandyRemoveUtil implements CandyUtil {
                 break;
             }
         }
+        System.out.println("字符串:"+str + ",消除重复字符串后的结果：" + sb);
 
         return sb.toString();
     }

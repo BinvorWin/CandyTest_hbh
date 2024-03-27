@@ -17,6 +17,7 @@ public class CharCandyRemoveUtilTest {
         assertEquals("试", charCandyRemoveUtil.changeStr("测测测测试"));
         assertEquals("!", charCandyRemoveUtil.changeStr("!..."));
         assertEquals(".", charCandyRemoveUtil.changeStr("."));
+        assertEquals("A", charCandyRemoveUtil.changeStr("ABBB"));
 
 
 
